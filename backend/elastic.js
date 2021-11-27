@@ -32,8 +32,6 @@ const searchRestaurants = async (q) => {
   const hits = body.hits.hits;
 
   const result = hits.map((hit) => {
-    console.log(hit);
-
     return {
       id: hit._id,
       name: hit._source.name,
